@@ -34,7 +34,7 @@ services:
       - /home/aeon/db:/data/db
       - ./mongo-seed:/docker-entrypoint-initdb.d
     ports:
-      - 127.0.0.1:27017:27017
+      - 159.89.46.177:27017:27017
     deploy:
       replicas: 1
       restart_policy:
