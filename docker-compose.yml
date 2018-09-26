@@ -3,7 +3,7 @@ services:
   aeon-docker:
     image: aeonpocket/rpc
     environment:
-      - DAEMON_HOST=192.168.2.110
+      - DAEMON_HOST=127.0.0.1
       - DAEMON_PORT=11181
     deploy:
       replicas: 5
@@ -34,7 +34,7 @@ services:
       - /home/aeon/db:/data/db
       - ./mongo-seed:/docker-entrypoint-initdb.d
     ports:
-      - 192.168.2.110:27017:27017
+      - 127.0.0.1:27017:27017
     deploy:
       replicas: 1
       restart_policy:
